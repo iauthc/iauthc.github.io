@@ -1,38 +1,10 @@
-# HASH YOUR URL TO SHARE BOOKMARKS
+# FOOD BOOK FOR FISH DISH
 
 ## About
 
-- Create web pages in the simple, fast editor
-- Share code that others can edit and modify
-- Clone web pages with the bookmarklet (under active development)
-- "Publish" web pages instantaneously
-- Published links never stop working and ~cannot be taken down~ function as
-  long as this site is trusted and extant
-- No dependencies
-- No signups
-- No tracking
-- No hosting
-- No cost
-- No commitment
 - A few hundred total lines of clear, well-documented HTML, CSS, and JavaScript
 
-
-
 ## How it works
-
-As hinted by its name, URL Pages works by storing the entire contents of a web
-page in the URL.
-
-Thus, as long as the URL exists, so does the page it points to. The rest of the
-URL Pages program is responsible for translating between web page code
-(HTML/CSS/JavaScript) and an "encoded" URL.
-
-- The **main page** takes encoded data from the URL, decodes it into regular
-  web page format, and displays it to the user
-- The **editor** encodes user-created web page data as a link that can be
-  shared
-- The **bookmarklet** takes a page that already exists and encodes it as a link
-  that can be shared
 
 When the main page is visited, the data is encoded in the URL using base 64
 encoding via JavaScript's `atob` and `btoa` functions in conjunction with its
