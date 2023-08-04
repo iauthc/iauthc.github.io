@@ -151,7 +151,8 @@ function getRandomString(length) {
     
       const uidParam = new URLSearchParams(window.location.search).get('u');
   
-      var decString = atob(uidParam);
+      //var decString = atob(uidParam);
+      var decString = uidParam;
   
       const isValidEmailInput = isValidEmail(decString);
     
