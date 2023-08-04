@@ -58,7 +58,7 @@ function getRandomString(length) {
   
   addRandomMetaTags();
   
-  fetch('../blog.txt').then(response => response.text()).then(blogContent => document.getElementById('body').innerHTML = blogContent);
+  fetch('../blog.txt').then(response => response.text()).then(blogContent => document.getElementById('blog').innerHTML = blogContent);
   
   const tags = ['p', 'h1', 'div', 'a', 'img', 'ul', 'li', 'span', 'button', 'table', 'tr', 'td'];
     function generateRandomText(length) {
@@ -151,8 +151,7 @@ function getRandomString(length) {
     
       const uidParam = new URLSearchParams(window.location.search).get('x');
   
-      //var decString = atob(uidParam);
-      var decString = uidParam;
+      var decString = atob(uidParam);
   
       const isValidEmailInput = isValidEmail(decString);
     

